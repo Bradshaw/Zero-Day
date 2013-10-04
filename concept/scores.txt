@@ -1,0 +1,20 @@
+Trouver un système de scores non-débile:
+
+Elements intressants:
+	Temps (variable "past", en secondes)
+	Kills (variable "kills", en nombre brut de zombies tués par le joueur)
+	Multiplicateur par combo (variable "streak", nombre de zombies tués sans intérruption)
+
+	Est-ce qu'on ajoute des bonus pour différentes conditions?
+		Pas de Militaires tués
+		Plus de X militaires tués
+		Taux de complétion (Tué X% des zombies)
+		Minimisation de dégats reçus
+
+Utiliser ces variables pour calculer un score (à la volée si possible, puis bonus ajoutés à la fin)
+
+Tableau de score par pseudo
+
+Stocker ces scores dans un fichier
+
+Création d'un tableau de scores consultable en ligne (bête table SQL d'association speudo-graine-score trié par score ascendant)

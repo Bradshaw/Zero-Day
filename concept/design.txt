@@ -1,0 +1,22 @@
+Jeu d'action/course
+
+La ville est frappée d'un virus zombie, heureusement il y a un système de défense anti-zombie, malheureusement le système est frappée d'un virus informatique.
+
+Le joueur possède une clé USB avec l'anti-virus, et doit se rendre à la base militaire de l'autre coté de la ville pour l'installer sur le serveur.
+Il s'y rendra en voiture, traversant des hordes de zombies, esquivant des militaires engagés dans le combat, et espérant ne pas être ciblé par les tourelles de défense confus.
+
+Jeu en vue oblique (ou vu du ciel), le joueur pilote une voiture physiquement simulée du point de départ jusqu'à la fin du niveau.
+Des zombies forment des hordes qui chargent et attaquent le joueur (et si le joueur n'est pas visible, il ciblent d'autres entités, militaires, tourelles, débris)
+Des militaires tirent en direction de tout zombie en vue, et des tourelles tirent sur des entités aléatoires.
+
+Un score sera calculé en fonction des zombies tués, dégats matériels causés, enchainements, et temps de parcours.
+
+Possibilités de multijoueurs:
+Ecran splitté : A tester, permettrait de ne pas avaoir à gerer des sorties d'écran, mais manque de place évident en mode 16 joueurs
+Tous sur un écran : Comment gérer les joeurs qui sortent de l'écran, comment décider où se place la caméra
+    Caméra au joueur le plus avancé
+    Un joueur qui sort de l'écran prend des dégats et se retrouve replacé dans la partie
+
+Coop - Les joueurs doivent tous arriver en vie à la fin du niveau, leurs scores sont sommés.
+Chacun pour soi - Mode normal, chque joueur obtient un score en fonction de soit kills, soit temps, soit les deux
+Survie - Le niveau boucle sur lui-même, les joueurs doivent rester en vie le plus longtemps possible
