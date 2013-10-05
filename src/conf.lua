@@ -8,6 +8,8 @@ function love.conf(t)
     t.window.width = 1024       -- The window width (number)
     t.window.height = 1280       -- The window height (number)
     t.window.fullwindow = true -- Enable fullscreen (boolean)
+    t.window.fullscreentype = "desktop"
+    t.window.borderless = true  
     t.window.vsync = false       -- Enable vertical sync (boolean)
     t.window.fsaa = 0           -- The number of FSAA-buffers (number)
     t.modules.joystick = false   -- Enable the joystick module (boolean)
