@@ -91,6 +91,11 @@ function love.load(arg)
     end
     --]]
 
+    
+    -- FIXE !!!!
+    love.window.setMode(1024, 1280, { fullscreen = true, borderless = true})
+
+
     midx = (love.graphics.getWidth()/default.scale)/2
 	midy = (love.graphics.getHeight()/default.scale)/2
 
