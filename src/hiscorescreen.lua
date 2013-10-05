@@ -2,12 +2,6 @@ local state = gstate.new()
 
 
 function state:init()
-	if not getthread then
-		sendthread= love.thread.newThread("send", "threadenvoie.lua")
-		getthread= love.thread.newThread("get", "threadreception.lua")
-		sendthread:start()
-		getthread:start()
-	end
 end
 
 
@@ -16,7 +10,7 @@ function state:enter()
 	capture = false
 	moved = false
 	tableau = charger()
-	love.mouse.setGrab(false)
+	love.mouse.setGrabbed(false)
 	page = 1
 	scoremenu = menupopper.new({
 		{text="Retour au menu",
@@ -88,20 +82,6 @@ function state:update(dt)
 		else
 			darkness:play()
 			moved = false
-		end
-	end
-	if getthread:get("finie") then
-		page = 1
-		tableau = {}
-		local message = getthread:get("message")
-		loadstring(message)()
-		scoremenu.entries[4].text = "Voir scores locaux"
-		scoremenu.entries[4].func =
-		function()
-			tableau = {}
-			page = 1
-			tableau = charger()
-			scoremenu.entries[4].text = "Voir scores en ligne"
 		end
 	end
 	--c[1].hitpoints = math.min(100,c[1].hitpoints+dt*(streak/10))

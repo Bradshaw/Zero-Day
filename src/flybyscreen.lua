@@ -13,7 +13,7 @@ function state:enter()
 		darkness:setLooping(false)
 		moved = true
 	end
-	love.mouse.setGrab(false)
+	love.mouse.setGrabbed(false)
 	flymenu = menupopper.new({
 		{text="Nouvelle partie",
 		func=function() resetgame() initgame() gstate.switch(roundstart) end},

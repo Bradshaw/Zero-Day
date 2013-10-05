@@ -17,14 +17,14 @@ mess = {}
 messnum = 0
 
 function messages(s)
-	table.insert(mess, {text=s,time=love.timer.getMicroTime()})
+	table.insert(mess, {text=s,time=love.timer.getTime()})
 	while #mess>3 do
 		table.remove(mess, 1)
 	end
 end
 
 function messagesupdate(dt)
-	while mess[1] and mess[1].time+1<love.timer.getMicroTime() do
+	while mess[1] and mess[1].time+1<love.timer.getTime() do
 			table.remove(mess, 1)
 	end
 	messnum = messnum + (#mess-messnum)*dt*5
@@ -162,12 +162,12 @@ end
 
 function initgame()
 	if not (sendthread or getthread) then
-		sendthread= love.thread.newThread("send", "threadenvoie.lua")
-		getthread= love.thread.newThread("get", "threadreception.lua")
-		sendthread:start()
-		getthread:start()
+		--sendthread= love.thread.newThread("send", "threadenvoie.lua")
+		--getthread= love.thread.newThread("get", "threadreception.lua")
+		--sendthread:start()
+		--getthread:start()
 	end
-	getthread:set("go",true)
+	--getthread:set("go",true)
 	levelend = false
 	if past then
 		temps = temps + past

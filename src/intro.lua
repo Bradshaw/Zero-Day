@@ -43,7 +43,7 @@ function state:enter()
 
 	capture = false
 	moved = true
-	love.mouse.setGrab(false)
+	love.mouse.setGrabbed(false)
 	intromask = 0
 	itguymask = 0
 	miliguymask = 0

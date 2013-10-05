@@ -37,7 +37,7 @@ end
 
 function animated_mt.draw(self, x, y, r, frame, var)
 	--print(frame,var,#self.quads)
-	love.graphics.drawq(
+	love.graphics.draw(
 		self.image,
 		self.quads[(frame or 1)%self.frames][(var or 1)%self.variations],
 		x,y,r,1,1,

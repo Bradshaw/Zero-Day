@@ -44,6 +44,9 @@ function state:keypressed(key, uni)
 	if useful.isIn(key,"escape","j","l") then
 		gstate.switch(pause)
 	end
+	if key=="p" then
+		c[1].hitpoints = 0
+	end
 end
 
 

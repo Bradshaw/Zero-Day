@@ -17,7 +17,7 @@ function state:enter()
 		})
 	engine:stop()
 	capture = false
-	love.mouse.setGrab(false)
+	love.mouse.setGrabbed(false)
 end
 
 

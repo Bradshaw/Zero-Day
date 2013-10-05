@@ -20,9 +20,9 @@ function t.draw(x,y,env)
 		end
 	end
 	if s==2 then
-		love.graphics.drawq(tex,useful.getq(env),x*default.tilesize.x,y*default.tilesize.y)
+		love.graphics.draw(tex,useful.getq(env),x*default.tilesize.x,y*default.tilesize.y)
 	else
-		love.graphics.drawq(alt,useful.getq(env),x*default.tilesize.x,y*default.tilesize.y)
+		love.graphics.draw(alt,useful.getq(env),x*default.tilesize.x,y*default.tilesize.y)
 	end
 	love.graphics.setColor(255,255,255,128)
 	--love.graphics.drawq(img,useful.getq(env),x*default.tilesize.x,y*default.tilesize.y)

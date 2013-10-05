@@ -12,14 +12,14 @@ function love.load(arg)
 	screenbox = love.graphics.newCanvas(1024,1024)
 	otherbox = love.graphics.newCanvas(1024,1024)
 	overlay = love.graphics.newCanvas(1024,1024)
-	love.graphics.setLine(0.8,"rough")
+	love.graphics.setLineStyle("rough",0.8)
 	screenbox:setFilter("nearest","nearest")
 	otherbox:setFilter("nearest","nearest")
 	overlay:setFilter("nearest","nearest")
 	bigvig=love.graphics.newImage("images/bigvig.png")
 	bigpain=love.graphics.newImage("images/bigpain.png")
 	love.graphics.setPointStyle("rough")
-	love.graphics.setDefaultImageFilter("nearest","nearest")
+	love.graphics.setDefaultFilter("nearest","nearest")
 	-- Charger les modules
 	--[[]]
 	font = love.graphics.newImageFont("images/myfont.png",

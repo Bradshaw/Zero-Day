@@ -159,14 +159,14 @@ function state:enter()
 	gotpass = false
 	--sauvthread= love.thread.newThread("sauvegarde", "threadsauvegarde.lua")
 	if not (sendthread or getthread) then
-		sendthread= love.thread.newThread("send", "threadenvoie.lua")
-		getthread= love.thread.newThread("get", "threadreception.lua")
-		sendthread:start()
-		getthread:start()
+		--sendthread= love.thread.newThread("send", "threadenvoie.lua")
+		--getthread= love.thread.newThread("get", "threadreception.lua")
+		--sendthread:start()
+		--getthread:start()
 	end
 	names = {}
 	online = false
-	getthread:set("go",true)
+	--getthread:set("go",true)
 
 
 	--print(sendthread,getthread)
@@ -183,11 +183,11 @@ function state:enter()
 	--sauvthread:set("diff",1)
 	--sauvthread:set("tempstotal",10)
 --	sauvthread:start()
-	sendthread:set("score", score+scorepartie)
-	sendthread:set("massacre", totalkills)
-	sendthread:set("maxcombo", maxstreak)
-	sendthread:set("diff", diff)
-	sendthread:set("tempstotal", temps+past)
+	--sendthread:set("score", score+scorepartie)
+	--sendthread:set("massacre", totalkills)
+	--sendthread:set("maxcombo", maxstreak)
+	--sendthread:set("diff", diff)
+	--sendthread:set("tempstotal", temps+past)
 	--sendthread:set("mdp", sha1("lolzors"))
 	--sendthread:start()
 
@@ -275,6 +275,7 @@ function state:update(dt)
 	end
 
 	updategame(dt/2)
+	--[[]
 	if getthread:get("finie") then
 		local ret =getthread:get("message")
 		if type(ret)=="string" and ret:sub(1,1)=="t" then
@@ -312,6 +313,7 @@ function state:update(dt)
 		cstate = cstate:inject("ERR")
 		errmess = " "
 	end
+	--]]
 	shake = math.min(1,math.max(shake-(dt), 0))
 	letterSelector.update(dt)
 end
