@@ -253,7 +253,7 @@ function state:keypressed(key, uni)
 				cstate.input = useful.buildString(letterSelector.select(), string.byte(letterSelector.select()), cstate.input)
 			end
 			if key == "a" then
-				cstate.input = useful.buildString("backspace", "backspace", cstate.input)
+				cstate.input = useful.buildString("backspace", 8, cstate.input)
 			end
 		end
 	end

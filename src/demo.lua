@@ -9,7 +9,7 @@ end
 function state:enter()
 	scoot = -1
 	capture = true
-	love.mouse.setGrab(true)
+	love.mouse.setGrabbed(true)
 	flashor = 0
 end
 
